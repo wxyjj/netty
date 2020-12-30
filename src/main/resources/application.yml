@@ -1,0 +1,17 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /netty
+
+spring:
+  application:
+    name: netty
+  profiles:
+    active: deapplication-dev.ymlv
+
+netty:
+  port: 8889
+  path: ${server.servlet.context-path}
+
+logging:
+  config: classpath:logback-spring.xml
